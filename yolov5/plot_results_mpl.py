@@ -47,7 +47,7 @@ def main(args):
 	plt.text(0.02, 0.01, "Defects Detected: "+str(len(coords[0])), fontsize=14, transform=plt.gcf().transFigure)
 
 	print("Labeled image saved to: " + args.save)
-	plt.savefig(args.save)
+	plt.savefig(args.save, dpi=args.dpi)
 
 if __name__ == '__main__':
 
@@ -58,6 +58,7 @@ if __name__ == '__main__':
 	parser.add_argument('--xdim', action='store', nargs='?', type=int, default=1104, help='Width of image.')
 	parser.add_argument('--ydim', action='store', nargs='?', type=int, default=800, help='Height of image.')
 	parser.add_argument('--save', action='store', nargs='?', type=str, default='demo_images/r2_0200_labeled.png', help='Where to save output?')
+	parser.add_argument('--dpi', action='store', nargs='?', type=int, default=200, help='Output dpi.')
 
 	args = parser.parse_args()
 	
