@@ -46,6 +46,7 @@ def main(args):
 	plt.scatter(x=coords[0], y=coords[1], color='r', s=1)
 	plt.text(0.02, 0.01, "Defects Detected: "+str(len(coords[0])), fontsize=14, transform=plt.gcf().transFigure)
 
+	print("Labeled image saved to: " + args.save)
 	plt.savefig(args.save)
 
 if __name__ == '__main__':
